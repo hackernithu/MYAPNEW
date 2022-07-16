@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+  background: #734f79;
+  font-family: 'Flamenco', serif;
+}
+
+.heading {
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.readme {
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+  
+  a {
+    color: #00a486;
+  }
+}
+
+/*_________________  Accordion
+________________________________________*/
+.accordion {
+  position: relative;
+  margin: 60px auto;
+  width: 80%;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #00a486;
+  border-bottom: 1px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #fff;
+  height: 0;
+  margin: -1px auto 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+    </style>
+</head>
+<body>
+<ul>
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <div class="heading">
+    <h2>zonzoctech</h2>
+</div>
+    <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+  </li>
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <div class="heading">
+        <h2>zonzoctech</h2>
+    </div>
+    <p>Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+  </li>
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <div class="heading">
+        <h2>zonzoctech</h2>
+    </div>
+    <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+  </li>
+</ul>
+</body>
+</html>
